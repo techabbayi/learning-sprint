@@ -157,6 +157,3 @@ Only after alignment would I start analysis—and even then, exploring with inte
 
 **The Bottom Line:** Data science without a question is just pattern-finding. The lifecycle ensures we find patterns that actually matter and drive decisions.
 
----
-
-*This README demonstrates understanding of the Question → Data → Insight framework and how it guides meaningful data science work.*
