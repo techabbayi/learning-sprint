@@ -160,3 +160,54 @@ Only after alignment would I start analysis—and even then, exploring with inte
 ---
 
 *This README demonstrates understanding of the Question → Data → Insight framework and how it guides meaningful data science work.*
+
+
+# Reading & Interpreting a Sample Data Science Project Repository
+
+## Part A: Repository Analysis & Documentation
+
+### 1. Project Intent & High-Level Flow
+
+#### What Problem Is Being Addressed?
+
+This project addresses **customer churn prediction** in a subscription-based business. The central question is: "Can we identify customers who are likely to cancel their subscription within the next 30 days, and what factors contribute most to churn?"
+
+This is a critical business problem because:
+- Retaining existing customers costs significantly less than acquiring new ones
+- Early identification enables proactive intervention through targeted retention campaigns
+- Understanding churn drivers helps improve product and service quality
+
+#### The High-Level Data Science Workflow
+
+The repository follows a structured workflow that mirrors the standard data science lifecycle:
+
+1. **Problem Definition** → Business stakeholders need to reduce customer churn from 25% to under 15% annually
+
+2. **Data Collection & Understanding** → Historical customer data is gathered, including usage patterns, billing history, support interactions, and demographic information
+
+3. **Data Cleaning & Transformation** → Raw data is processed to handle missing values, convert categorical variables, create derived features, and prepare datasets for modeling
+
+4. **Exploratory Data Analysis (EDA)** → Visual and statistical analysis reveals patterns, correlations, and potential predictors of churn
+
+5. **Feature Engineering** → New meaningful variables are created (e.g., usage trends, payment consistency, engagement scores)
+
+6. **Model Development** → Multiple machine learning models are trained and compared (logistic regression, random forest, gradient boosting)
+
+7. **Model Evaluation** → Models are tested on holdout data using appropriate metrics (precision, recall, AUC-ROC)
+
+8. **Insights & Recommendations** → Findings are translated into actionable business recommendations
+
+9. **Deployment Preparation** → Best-performing model is prepared for production use
+
+#### How Repository Structure Reflects the Lifecycle
+
+The repository organization directly maps to these workflow stages:
+
+- **`data/`** folders separate raw data (stage 2) from processed data (stage 3)
+- **`notebooks/`** contains numbered exploratory notebooks tracking the progression from EDA (stage 4) through modeling (stage 6)
+- **`src/` or `scripts/`** holds reusable code for data processing (stage 3) and feature engineering (stage 5)
+- **`models/`** stores trained model artifacts (stage 6)
+- **`reports/` or `figures/`** contains finalized outputs for stakeholder communication (stage 8)
+- **`requirements.txt` or `environment.yml`** ensures reproducibility across stages
+
+This structure ensures that work is **traceable, reproducible, and organized by purpose** rather than by date or arbitrary naming. A new contributor can immediately understand where each stage of work lives.
